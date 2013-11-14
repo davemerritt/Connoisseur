@@ -1,0 +1,20 @@
+<h4><%= link_to 'Back', stores_url %></h4>
+<% stores = @stores['result'] %>
+
+<h2>Store: <%= stores['name'] %></h2>
+
+<p><%= stores['city'] %></p> 
+<p>Address:  <%= stores['address_line_1'] %>, <%= stores['address_line_2']%></p>
+<p><%= stores ['postal_code'] %></p>
+
+<h4>Tel: <%= stores['telephone'] %></h4>
+
+<h3>Store Hours</h3>
+<p>Sunday: <%= stores['sunday_open'] %> - <%= stores['sunday_close']%></p>
+<p>Monday: <%= stores['monday_open'] %> - <%= stores['monday_close']%></p>
+<p>Tuesday: <%= stores['tuesday_open'] %> - <%= stores['tuesday_close']%></p>
+<p>Wednesday: <%= stores['wednesday_open'] %> - <%= stores['wednesday_close']%></p>
+<p>Thursday: <%= stores['thursday_open'] %> - <%= stores['thursday_close']%></p>
+<p>Friday: <%= stores['friday_open'] %> - <%= stores['friday_close']%></p>
+<p>Saturday: <%= stores['saturday_open'] %> - <%= stores['saturday_close']%></p>
+

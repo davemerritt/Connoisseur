@@ -1,7 +1,12 @@
+
+<h1>Alcohol</h1>
+
 <% @products['result'].each do |product| %>
-  <section>
-   <p> <%= link_to product['name'], product_path(product['id']) %></p>
-    <p>Price: <%=  number_to_currency(product['price_in_cents'].to_f / 100 ) %></p>
-    <p><%= product['primary_category'] %></p>
-  </section>
+  	<section>
+   		<p> <%= link_to product['name'], product_path(product['id']) %></p>
+    	<p>Price: <%=  number_to_currency(product['price_in_cents'].to_f / 100 ) %></p>
+    	<p><%= product['primary_category'] %></p>
+  	</section>
 <% end %>
+<br>
+<h2><%= link_to 'Stores', "stores#index" %></h2>

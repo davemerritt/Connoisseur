@@ -1,2 +1,8 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<h4><%= link_to 'Back', products_url %></h4>
+
+<% products = @products['result'] %>
+
+<h3>Brand: <%= products['name'] %></h3>
+<p>Price: <%= number_to_currency(products['price_in_cents'].to_f / 100 ) %></p>
+<p>Category: <%= products['primary_category'] %></p>
+<p>Inventory Count: <%= products['inventory_count']  %></p>
